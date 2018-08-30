@@ -28,3 +28,8 @@ Starting alfa
 | alfa         | RUNNING | 10.81.226.98 (eth0)  |      | PERSISTENT | 0         |
 +--------------+---------+----------------------+------+------------+-----------+
 ```
+
+
+### Experiments
+1. [Docker in lxd](docker-lxd.md)
+2. [Docker Swarm in lxd](docker-swarm-lxd.md)
