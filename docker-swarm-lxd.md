@@ -28,7 +28,5 @@ lxc list
 
 
 
-[Guide](docker-lxd.md)
 
 
-p
