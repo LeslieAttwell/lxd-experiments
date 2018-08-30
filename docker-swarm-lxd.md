@@ -54,15 +54,17 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 
 root@docker-alfa:~# 
 ```
-3. Copy/Save the `docker swarm join --token %` command for the **docker-brave** and **docker-charlie** workers.
-4. Exec into **docker-bravo** and into **docker-charlie** (see Step 1 example) and run the command copied from Step 2. Example:
-Worker 1 join:
+3. Copy/Save the `docker swarm join --token %` command.
+4. Exec into **docker-bravo** and into **docker-charlie** (see Step 1 example) and run the command copied from Step 2. 
+Example:
+
+**Worker 1 join**
 ```
 root@docker-bravo:~# docker swarm join --token SWMTKN-1-5qqlg1tkfsfscxra931pheapq3j2qwkp054rsc6hcvvesatnrm-0ndpprfhwraia9t03rmhwc3zu 10.81.226.238:2377
 This node joined a swarm as a worker.
 root@docker-bravo:~# 
 ```
-Worker 2 join:
+**Worker 2 join**
 ```
 root@docker-charlie:~# docker swarm join --token SWMTKN-1-5qqlg1tkfsfscxra931pheapq3j2qwkp054rsc6hcvvesatnrm-0ndpprfhwraia9t03rmhwc3zu 10.81.226.238:2377
 This node joined a swarm as a worker.
@@ -78,3 +80,15 @@ t8jnbkrmbl70rsarjgul5piz4     docker-charlie      Ready               Active    
 root@docker-alfa:~# 
 ```
 Docker Swarm running in System Container managed by LXD is now ready.
+
+### Deploy the sample Voting app
+1. Exec into **docker-alfa** by running `lxc exec docker-alfa -- bash`.
+2. Clone the Voting App 
+```
+git clone https://github.com/docker/example-voting-app
+cd example-voting-app
+```
+3. Deploy the stack by running 
+```
+docker stack deploy --compose-file=docker-stack.yml voting_stack
+```
