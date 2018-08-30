@@ -1,3 +1,4 @@
+![lxd image](./images/lxd.png)
 # LXD Experiments
 Here I just want to play with LXD (Machine Containers) to understand the possible and identify use cases.
 [Getting Started Guide](https://tutorials.ubuntu.com/tutorial/tutorial-setting-up-lxd-1604#0)
