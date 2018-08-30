@@ -2,7 +2,7 @@
 
 ### Preparing Cluster
 1. Build first 3x System containers as per this [guide](docker-lxd.md).
-```
+```bash
 lxc launch ubuntu:18.04 docker-alfa -c security.nesting=true
 lxc launch ubuntu:18.04 docker-bravo -c security.nesting=true
 lxc launch ubuntu:18.04 docker-charlie -c security.nesting=true
@@ -29,13 +29,15 @@ lxc list
 ```
 
 ### Cluster Design
+```ascii
                MASTER
-	     docker-alfa
-	          :
+            docker-alfa
+                 :
        ----------------------
        :                    :
     WORKER1              WORKER2
  docker-bravo        docker-charlie
+ ```
 
 ### Starting Docker Swarm Cluster
 1. Exec into **docker-alfa** by running `lxc exec docker-alfa -- bash` which will be the master and run `docker swarm init` Example:
