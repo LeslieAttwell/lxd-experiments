@@ -29,15 +29,13 @@ lxc list
 ```
 
 ### Cluster Design
-```ascii
-               MASTER
+            **MASTER**
             docker-alfa
                  :
        ----------------------
        :                    :
-    WORKER1              WORKER2
- docker-bravo        docker-charlie
- ```
+  **WORKER 1**          **WORKER 2**
+  docker-bravo         docker-charlie
 
 ### Starting Docker Swarm Cluster
 1. Exec into **docker-alfa** by running `lxc exec docker-alfa -- bash` which will be the master and run `docker swarm init` Example:
