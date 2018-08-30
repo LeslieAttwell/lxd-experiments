@@ -31,7 +31,7 @@ stable"
 4. Install Docker CE
 ```
 apt-get update \
- && apt-get install docker-ce -y
+&& apt-get install docker-ce -y
 ```
 
 ### Test Docker in 
