@@ -65,3 +65,15 @@ To generate this message, Docker took the following steps:
     For more examples and ideas, visit:
     https://docs.docker.com/engine/userguide/
 ```
+2. Run alpine test container
+```
+docker run -it --rm alpine sh
+Unable to find image 'alpine:latest' locally
+latest: Pulling from library/alpine
+8e3ba11ec2a2: Pull complete
+Digest: sha256:7043076348bf5040220df6ad703798fd8593a0918d06d3ce30c6c93be117e430
+Status: Downloaded newer image for alpine:latest
+/ # hostname
+602a3cc02e0d
+/ # 
+```
