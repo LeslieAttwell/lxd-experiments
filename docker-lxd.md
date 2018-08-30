@@ -31,5 +31,12 @@ stable"
 4. Install Docker CE
 ```
 apt-get update \
- && apt-get install docker-ce
+ && apt-get install docker-ce -y
+```
+
+### Test Docker in 
+1. Running hello-world
+```
+docker run hello-world
+
 ```
